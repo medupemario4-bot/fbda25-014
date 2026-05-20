@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About &amp; Services — Motswedi SACCOS</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="fade-in">
+
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="images/logo.jpg" alt="Motswedi SACCOS Logo" class="nav-logo-img"/>
+  </a>
+  <div class="nav-links">
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn active" href="aboutservices.html">About &amp; Services</a>
+    <a class="nav-btn" href="faq.html">FAQ</a>
+    <a class="nav-cta" href="#membership">Join Now</a>
+  </div>
+</nav>
+
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="breadcrumb-sep">/</span>
+  <span id="breadcrumb-current">About &amp; Services</span>
+</div>
+
+
+<div class="as-nav">
+  <button class="as-tab" id="tab-who"      onclick="openTab('who')">Who We Are</button>
+  <button class="as-tab" id="tab-services" onclick="openTab('services')">Services</button>
+  <button class="as-tab" id="tab-join"     onclick="openTab('join')">Membership</button>
+  <button class="as-tab" id="tab-news"     onclick="openTab('news')">News &amp; Updates</button>
+  <button class="as-tab" id="tab-contact"  onclick="openTab('contact')">Contact</button>
+</div>
+
+
+<div id="as-who" class="as-content">
+  <div class="section">
+    <div class="gold-line"></div>
+    <h2 class="section-title">Who We Are</h2>
+    <p class="section-sub">Serving Botswana's public servants since 1985.</p>
+    <div class="info-grid">
+      <div class="info-text">
+        <h2>Our History</h2>
+        <p>Motswedi SACCOS was established on 19 November 1985 by staff of the Department for Co-operative Development and the Botswana Co-operative Bank. The name "Motswedi" means water fountain in Setswana — a source of sustenance for the community.</p>
+        <p>Over four decades, the society has grown from a small departmental cooperative to a society serving over 3,500 members across all government ministries, departments, and parastatal organisations in Botswana.</p>
+        <h2 style="margin-top:28px;">Mission &amp; Vision</h2>
+        <p><strong>Mission:</strong> To promote a culture of savings and provide affordable credit to members, improving their financial wellbeing.</p>
+        <p><strong>Vision:</strong> To be the cooperative of choice for all Botswana public servants.</p>
+        <h2 style="margin-top:28px;">Membership Bond</h2>
+        <p>The membership bond has been extended to all employees of government ministries, departments, and parastatal organisations. If you are paid through the Botswana government payroll, you are eligible to join.</p>
+      </div>
+      <div>
+        <div class="info-box">
+          <h3>Governance</h3>
+          <div class="info-row"><span>Regulated by</span><span>Dept. Co-operative Dev.</span></div>
+          <div class="info-row"><span>Founded</span><span>19 Nov 1985</span></div>
+          <div class="info-row"><span>Members</span><span>3,500+</span></div>
+          <div class="info-row"><span>Total Assets</span><span>P145 Million+</span></div>
+          <div class="info-row"><span>Membership</span><span>All Govt. &amp; Parastatals</span></div>
+          <div class="info-row"><span>Member of</span><span>ACOSCA</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="as-services" class="as-content">
+  <div class="section" id="services">
+    <div class="gold-line"></div>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Savings, loans, and share capital — built for public servants.</p>
+    <div class="card-grid" style="margin-bottom:48px;">
+      <div class="card card-static">
+        <div class="card-icon"></div>
+        <h3>Savings Accounts</h3>
+        <p>Contribute monthly via payroll deduction. Earn competitive interest on your accumulated savings. Multiple product tiers available based on your contribution level.</p>
+      </div>
+      <div class="card card-static">
+        <div class="card-icon"></div>
+        <h3>Loan Products</h3>
+        <p>Borrow up to 4x your savings. Personal loans and emergency loans available. Competitive interest rates lower than commercial banks, with straightforward repayment terms.</p>
+      </div>
+      <div class="card card-static">
+        <div class="card-icon"></div>
+        <h3>Share Capital</h3>
+        <p>As a member-owned cooperative, you hold shares in Motswedi SACCOS. Shares grow in value and entitle you to a share of annual dividends declared at AGM.</p>
+      </div>
+    </div>
+
+    <div class="gold-line" id="calculator"></div>
+    <h2 class="section-title" style="margin-bottom:6px;">Loan Repayment Calculator</h2>
+    <p class="section-sub">Estimate your monthly payment instantly — no account needed.</p>
+    <div class="calc-wrap">
+      <h3>Calculate Your Repayment</h3>
+      <p>Enter your loan amount and term to see an estimated monthly repayment.</p>
+      <div class="field">
+        <label>Loan Amount (BWP)</label>
+        <input type="number" id="loanAmt" value="10000" min="1000" oninput="calcLoan()"/>
+      </div>
+      <div class="field">
+        <label>Repayment Period</label>
+        <select id="loanTerm" onchange="calcLoan()">
+          <option value="12">12 months</option>
+          <option value="24" selected>24 months</option>
+          <option value="36">36 months</option>
+          <option value="48">48 months</option>
+          <option value="60">60 months</option>
+        </select>
+      </div>
+      <div class="calc-result">
+        <div>
+          <div class="calc-result-label">Estimated Monthly Repayment</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px;">At 12% p.a. indicative rate</div>
+        </div>
+        <div class="calc-result-value" id="calcResult">P 487</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MEMBERSHIP ── -->
+<div id="as-join" class="as-content">
+  <div class="section" id="membership">
+    <div class="gold-line"></div>
+    <h2 class="section-title">Membership</h2>
+    <p class="section-sub">Join in three simple steps. Open to all government and parastatal employees.</p>
+    <div class="card-grid" style="margin-bottom:48px;">
+      <div class="card card-static">
+        <div class="card-icon"></div>
+        <h3>Step 1 — Check Eligibility</h3>
+        <p>You must be employed by a Botswana government ministry, department, or parastatal organisation and paid through the government payroll system.</p>
+      </div>
+      <div class="card card-static">
+        <div class="card-icon"></div>
+        <h3>Step 2 — Download &amp; Complete Form</h3>
+        <p>Download the membership application form below, complete it with your personal and employment details, and attach a copy of your national ID and payslip.</p>
+      </div>
+      <div class="card card-static">
+        <div class="card-icon"></div>
+        <h3>Step 3 — Submit at the Office</h3>
+        <p>Bring your completed form to Zambezi Towers, 5th Floor, CBD Gaborone, Monday–Friday 09:00–17:00. Processing takes 5–7 working days.</p>
+      </div>
+    </div>
+
+    <div class="gold-line"></div>
+    <h2 class="section-title" style="margin-bottom:6px;">Forms &amp; Downloads</h2>
+    <p class="section-sub">Download, complete, and submit in person.</p>
+    <div class="forms-list">
+      <div class="form-item">
+        <div class="form-icon"></div>
+        <div class="form-info">
+          <h4>Membership Application Form</h4>
+          <p>For new members joining Motswedi SACCOS for the first time.</p>
+        </div>
+        <button class="form-dl" onclick="showToast('Membership form download started')">Download PDF</button>
+      </div>
+      <div class="form-item">
+        <div class="form-icon"></div>
+        <div class="form-info">
+          <h4>Loan Application Form</h4>
+          <p>For existing members applying for a personal or emergency loan.</p>
+        </div>
+        <button class="form-dl" onclick="showToast('Loan form download started')">Download PDF</button>
+      </div>
+      <div class="form-item">
+        <div class="form-icon"></div>
+        <div class="form-info">
+          <h4>Monana Loan Form</h4>
+          <p>Specialised loan product application for eligible members.</p>
+        </div>
+        <button class="form-dl" onclick="showToast('Monana loan form download started')">Download PDF</button>
+      </div>
+      <div class="form-item">
+        <div class="form-icon"></div>
+        <div class="form-info">
+          <h4>CLP Refund Form</h4>
+          <p>For members requesting a Credit Life Policy refund.</p>
+        </div>
+        <button class="form-dl" onclick="showToast('CLP refund form download started')">Download PDF</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="as-news" class="as-content">
+  <div class="section" id="news">
+    <div class="gold-line"></div>
+    <h2 class="section-title">News &amp; Updates</h2>
+    <p class="section-sub">Announcements, policy changes, and financial literacy resources.</p>
+    <div class="news-list">
+      <div class="news-item">
+        <div class="news-date"><span class="day">13</span><span class="mon">Apr 2026</span></div>
+        <div class="news-body">
+          <h4>Group Funeral Scheme — Updating Process</h4>
+          <p>Members are reminded to update their Group Funeral Scheme beneficiary details. Contact the office at 390 8227 / 350 0973 or visit in person.</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <div class="news-date"><span class="day">01</span><span class="mon">Mar 2026</span></div>
+        <div class="news-body">
+          <h4>AGM Notice — Annual General Meeting 2026</h4>
+          <p>The Annual General Meeting will be held on 15 May 2026 at 09:00. All members are encouraged to attend and participate in society governance decisions.</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <div class="news-date"><span class="day">15</span><span class="mon">Jan 2026</span></div>
+        <div class="news-body">
+          <h4>Financial Literacy: Managing Debt on a Government Salary</h4>
+          <p>Our latest article covers practical strategies for managing credit obligations, building emergency savings, and using cooperative benefits effectively.</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <div class="news-date"><span class="day">10</span><span class="mon">Dec 2025</span></div>
+        <div class="news-body">
+          <h4>Membership Bond Extended to All Parastatals</h4>
+          <p>Motswedi SACCOS confirms that all employees from government ministries, departments, and parastatal organisations are now eligible to join.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="as-contact" class="as-content">
+  <div class="section" id="contact">
+    <div class="gold-line"></div>
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-sub">We are here Monday to Friday, 09:00–17:00.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card" style="margin-bottom:16px;">
+          <h4>Office Details</h4>
+          <div class="contact-row"><div class="contact-row-icon"></div><div class="contact-row-text">Zambezi Towers, 5th Floor<br/>Central Business District, Gaborone</div></div>
+          <div class="contact-row"><div class="contact-row-icon"></div><div class="contact-row-text">+267 390 8227 / +267 350 0973<br/>WhatsApp: +267 77 892 470</div></div>
+          <div class="contact-row"><div class="contact-row-icon"></div><div class="contact-row-text">info@motswedisaccos.co.bw</div></div>
+          <div class="contact-row"><div class="contact-row-icon"></div><div class="contact-row-text">Monday – Friday: 09:00 – 17:00<br/>Weekends &amp; Public Holidays: Closed</div></div>
+          <div class="contact-row"><div class="contact-row-icon"></div><div class="contact-row-text">P O Box 81027, Gaborone</div></div>
+        </div>
+        <div class="map-placeholder">Google Maps — Zambezi Towers, CBD Gaborone</div>
+      </div>
+      <div class="contact-card">
+        <h4> Send Us a Message</h4>
+        <div class="contact-form">
+          <input type="text" placeholder="Your full name"/>
+          <input type="email" placeholder="Email address"/>
+          <input type="text" placeholder="Subject"/>
+          <textarea placeholder="Your message..."></textarea>
+          <button class="btn-primary" style="width:100%;" onclick="showToast('Message sent! We will respond within 2 business days.')">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Motswedi SACCOS</div>
+      <p class="footer-tagline">Saving and Credit Co-operative Society serving Botswana's public servants since 1985. Regulated by the Department for Co-operative Development.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="index.html">Home</a>
+      <a href="#who" onclick="openTab('who')">About Us</a>
+      <a href="#services" onclick="openTab('services')">Our Services</a>
+      <a href="#membership" onclick="openTab('join')">Membership</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a>Zambezi Towers, 5th Floor, CBD</a>
+      <a href="tel:+26739082270">+267 390 8227</a>
+      <a href="mailto:info@motswedisaccos.co.bw">info@motswedisaccos.co.bw</a>
+      <a>Mon–Fri: 09:00–17:00</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Motswedi SACCOS. All rights reserved.</span>
+    <span>Registered &amp; regulated by the Department for Co-operative Development, Botswana</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+
+  const tabs = { who:'Who We Are', services:'Services', join:'Membership', news:'News & Updates', contact:'Contact' };
+
+  function openTab(name) {
+    document.querySelectorAll('.as-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.as-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    document.getElementById('as-' + name).classList.add('active');
+    document.getElementById('breadcrumb-current').textContent = 'About & Services — ' + (tabs[name] || '');
+    window.scrollTo({ top: 80, behavior: 'smooth' });
+  }
+
+
+  const hashMap = { '#who':'who', '#services':'services', '#calculator':'services', '#membership':'join', '#news':'news', '#contact':'contact' };
+  const startTab = hashMap[window.location.hash] || 'who';
+  openTab(startTab);
+
+
+  function calcLoan() {
+    const amt = parseFloat(document.getElementById('loanAmt').value) || 0;
+    const term = parseInt(document.getElementById('loanTerm').value);
+    const rate = 0.12 / 12;
+    let monthly = 0;
+    if (rate > 0 && term > 0 && amt > 0) {
+      monthly = amt * rate * Math.pow(1+rate, term) / (Math.pow(1+rate, term) - 1);
+    }
+    document.getElementById('calcResult').textContent = 'P ' + monthly.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  calcLoan();
+
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = '✓ ' + msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3000);
+  }
+</script>
+</body>
+</html>

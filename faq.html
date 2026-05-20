@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ — Motswedi SACCOS</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="fade-in">
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-mark">M</div>
+    <span class="nav-logo-text">Motswedi SACCOS</span>
+  </a>
+  <div class="nav-links">
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="about-services.html">About &amp; Services</a>
+    <a class="nav-btn active" href="faq.html">FAQ</a>
+    <a class="nav-cta" href="about-services.html#membership">Join Now</a>
+  </div>
+</nav>
+
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="breadcrumb-sep">/</span>
+  <span>FAQ</span>
+</div>
+
+
+<div class="faq-hero">
+  <h1>Frequently Asked Questions</h1>
+  <p>Quick answers to the most common questions about Motswedi SACCOS.</p>
+  <div class="faq-search">
+    <input type="text" id="faqSearch" placeholder="Search questions..." oninput="filterFaq(this.value)"/>
+    <button onclick="filterFaq(document.getElementById('faqSearch').value)">Search</button>
+  </div>
+</div>
+
+
+<div class="faq-list">
+
+  <div class="faq-cat" data-cat>Membership</div>
+  <div class="faq-item" data-q="Who is eligible to join Motswedi SACCOS">
+    <button class="faq-q" onclick="toggleFaq(this)">Who is eligible to join Motswedi SACCOS? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">All employees of Botswana government ministries, departments, and parastatal organisations who are paid through the government payroll system are eligible to join. There is no minimum service period required.</div>
+  </div>
+  <div class="faq-item" data-q="How do I apply for membership">
+    <button class="faq-q" onclick="toggleFaq(this)">How do I apply for membership? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">Download the Membership Application Form from our <a href="about-services.html#membership">Membership page</a>, complete it, and submit it in person at Zambezi Towers, 5th Floor, CBD Gaborone with a copy of your national ID and latest payslip. Processing takes 5–7 working days.</div>
+  </div>
+  <div class="faq-item" data-q="minimum monthly contribution savings">
+    <button class="faq-q" onclick="toggleFaq(this)">What is the minimum monthly contribution? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">The minimum monthly savings contribution is P50, deducted directly from your salary through the government payroll system. You can choose to contribute more to build your savings faster.</div>
+  </div>
+
+  <div class="faq-cat" data-cat>Loans</div>
+  <div class="faq-item" data-q="How much can I borrow loan amount">
+    <button class="faq-q" onclick="toggleFaq(this)">How much can I borrow? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">Members qualify for loans of up to four times their accumulated savings. For example, if you have saved P10,000, you can apply for a loan of up to P40,000, subject to your repayment capacity.</div>
+  </div>
+  <div class="faq-item" data-q="loan interest rates">
+    <button class="faq-q" onclick="toggleFaq(this)">What are the loan interest rates? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">Motswedi SACCOS offers competitive interest rates significantly lower than commercial banks. The exact rate will be confirmed upon application. Use our <a href="about-services.html#calculator">Loan Calculator</a> under Services for an estimate.</div>
+  </div>
+  <div class="faq-item" data-q="loan approval processing time">
+    <button class="faq-q" onclick="toggleFaq(this)">How long does loan approval take? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">Loan applications are typically processed within 5–10 working days, provided all required documentation is submitted correctly. Emergency loans may be processed faster at the discretion of management.</div>
+  </div>
+
+  <div class="faq-cat" data-cat>Savings &amp; Accounts</div>
+  <div class="faq-item" data-q="check savings balance online statement">
+    <button class="faq-q" onclick="toggleFaq(this)">Can I check my savings balance online? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">Monthly statements are sent via email to registered members. You can also contact the office directly at +267 390 8227 to request your current savings balance, or visit in person during office hours.</div>
+  </div>
+  <div class="faq-item" data-q="savings leave government employment resign">
+    <button class="faq-q" onclick="toggleFaq(this)">What happens to my savings if I leave government employment? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">Members who resign from government service retain their membership as long as any outstanding loans are being serviced. Savings can be maintained or withdrawn subject to the society's rules. Contact the office for guidance specific to your situation.</div>
+  </div>
+
+  <div class="faq-cat" data-cat>General</div>
+  <div class="faq-item" data-q="offices located address Gaborone">
+    <button class="faq-q" onclick="toggleFaq(this)">Where are your offices located? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">We are located at Zambezi Towers, 5th Floor, Central Business District, Gaborone. We are open Monday to Friday, 09:00–17:00. Contact us at +267 390 8227 or info@motswedisaccos.co.bw.</div>
+  </div>
+  <div class="faq-item" data-q="regulated NBFIRA cooperative development">
+    <button class="faq-q" onclick="toggleFaq(this)">Is Motswedi SACCOS regulated? <span class="faq-chevron">⌄</span></button>
+    <div class="faq-a">Yes. Motswedi SACCOS is registered and regulated by the Department for Co-operative Development in Botswana, which oversees its operations, investment options, and governance structures. The society is also a member of the African Confederation of Savings and Credit Associations (ACOSCA).</div>
+  </div>
+
+  <div id="no-results" style="display:none; text-align:center; padding:40px; color:var(--muted); font-size:15px;">
+    No questions match your search. Try a different keyword or <a href="about-services.html#contact" style="color:var(--navy);">contact us directly</a>.
+  </div>
+
+</div>
+
+
+<div class="cta-banner" style="margin-top:0;">
+  <div>
+    <h2>Still have questions?</h2>
+    <p>Our team is available Monday–Friday, 09:00–17:00.</p>
+  </div>
+  <a class="btn-primary" href="about-services.html#contact">Contact Us</a>
+</div>
+
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Motswedi SACCOS</div>
+      <p class="footer-tagline">Saving and Credit Co-operative Society serving Botswana's public servants since 1985. Regulated by the Department for Co-operative Development.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="index.html">Home</a>
+      <a href="about-services.html#who">About Us</a>
+      <a href="about-services.html#services">Our Services</a>
+      <a href="about-services.html#membership">Membership</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a>Zambezi Towers, 5th Floor, CBD</a>
+      <a href="tel:+26739082270">+267 390 8227</a>
+      <a href="mailto:info@motswedisaccos.co.bw">info@motswedisaccos.co.bw</a>
+      <a>Mon–Fri: 09:00–17:00</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Motswedi SACCOS. All rights reserved.</span>
+    <span>Registered &amp; regulated by the Department for Co-operative Development, Botswana</span>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const ans = btn.nextElementSibling;
+    const isOpen = ans.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) {
+      ans.classList.add('open');
+      btn.classList.add('open');
+    }
+  }
+
+
+  function filterFaq(query) {
+    const q = query.toLowerCase().trim();
+    const items = document.querySelectorAll('.faq-item');
+    const cats = document.querySelectorAll('.faq-cat');
+    let visibleCount = 0;
+
+    items.forEach(item => {
+      const text = (item.dataset.q || '') + ' ' + item.textContent;
+      const match = !q || text.toLowerCase().includes(q);
+      item.style.display = match ? '' : 'none';
+      if (match) visibleCount++;
+    });
+
+  
+    
+    cats.forEach(cat => {
+      let next = cat.nextElementSibling;
+      let hasVisible = false;
+      while (next && !next.hasAttribute('data-cat')) {
+        if (next.style.display !== 'none') hasVisible = true;
+        next = next.nextElementSibling;
+      }
+      cat.style.display = hasVisible ? '' : 'none';
+    });
+
+    document.getElementById('no-results').style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motswedi SACCOS-Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+    <nav>
+        <a class="nav-logo" href="index.html">
+            <img src="images/logo.jpg" alt="Motswedi SACCOS Logo" class="nav-logo-img"/>
+        </a>
+        <div class="nav-links">
+          <a class="nav-btn active" href="index.html">Home</a>
+          <a class="nav-btn" href="aboutservices.html">About &amp; Services</a>
+          <a class="nav-btn" href="faq.html">FAQ</a>
+          <a class="nav-btn" href="Feedback.html">Feedback</a>
+          <a class="nav-cta" href="aboutservices.html#membership">Join Now</a>
+        </div>  
+    </nav>
+    
+    <div class="hero">
+        <div class="hero-badge">
+        </div>
+        <div class="hero-buttons">
+          <a class="btn-primary" href="aboutservices.html#membership">Become a member</a>
+          <a class="btn-outline" href="aboutservices.html#services">View Services</a>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number">3,500+</div>
+            <div class="stat-label">Active Members</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">P145M</div>
+            <div class="stat-label">Total Savings</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">40</div>
+            <div class="stat-label">Years of Service</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">4x</div>
+            <div class="stat-label">Loan to Savings Ratio</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="line"></div>
+        <h2 class="section-title">What We Offer</h2>
+        <p class="section-sub">Everything you need - find it all under About &amp; Services.</p>
+        <div class="card-grid">
+            <a class="card" href="aboutservices.html#services">
+                <div class="card-icon"></div>
+                <h3>Savings Accounts</h3>
+                <p>Multiple savings products designed to help you grow your money steadily through payroll deductions.</p>
+                <span class="card-link">Learn more</span>
+            </a>
+            <a class="card" href="aboutservices.html#services">
+                <div class="card-icon"></div>
+                <h3>Affordable Loans</h3>
+                <p>Borrow up to 4x your savings at competitive rates with flexible repayment terms that suit your salary.</p>
+                <span class="card-link">View loan products</span>
+            </a>
+            <a class="card" href="aboutservices.html#calculator">
+                <div class="card-icon"></div>
+                <h3>Loan Calculator</h3>
+                <p>Estimate your monthly repayments instantly before applying - no login required.</p>
+                <span class="card-link">Try the calculator</span>
+            </a>
+            <a class="card" href="aboutservices.html#membership">
+                <div class="card-icon"></div>
+                <h3>Join &amp; Download Forms</h3>
+                <p>Joining is simple. Download your membership or loan application form and submit in person.</p>
+                <span class="card-link">Get forms</span>
+            </a>
+            <a class="card" href="aboutservices.html#news">
+                <div class="card-icon"></div>
+                <h3>News &amp; Updates</h3>
+                <p>Stay informed with the latest news, announcements, and financial tips from Motswedi SACCOS.</p>
+                <span class="card-link">Read our news</span>
+            </a>
+            <a class="card" href="aboutservices.html#contact">
+                <div class="card-icon"></div>
+                <h3>Find &amp; Contact Us</h3>
+                <p>Zambezi Towers, 5th Floor, CBD Gaborone. Open Monday-Friday, 09:00-17:00.</p>
+                <span class="card-link">Get directions</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="cta-banner">
+        <div>
+            <h2>Ready to start saving?</h2>
+            <p>Open to all government ministries, departments and parastatal employees.</p>
+        </div>
+        <a Class="btn-primary" href="aboutservices.html#membership">Join Motswedi SACCOS Today</a>
+    </div>
+
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">Motswedi SACCOS</div>
+                <P class="footer-tagline">Saving and Credit Co-operative Society serving Botswana's public servants since 1985. Regulated by Department for Co-operative Development.</P>
+            </div>
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <a href="index.html">Home</a>
+                <a href="aboutservices.html#who">About Us</a>
+                <a href="aboutservices.html#services">Our Services</a>
+                <a href="aboutservices.html#membership">Membership</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a>Zambezi Towers, 5Th Floor, CBD</a>
+                <a href="tel:+26739082270">+267 390 82270</a>
+                <a href="mailto:info@motswedisaccos.co.bw">info@motswedisaccos.co.bw</a>
+                <a>Mon-Fri: 09:00-17:00</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2024 Motswedi SACCOS. All rights reserved.</span>
+            <span>Registered &amp; regulated by the Department for Co-operative Development, Botswana</span>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script>
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent ='✓' +msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3000)
+        }
+    </script>
+</body>
+</html>
