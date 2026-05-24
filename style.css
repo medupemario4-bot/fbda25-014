@@ -962,6 +962,7 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
+    align-items: flex-end;
     position: absolute;
     top: 64px;
     left: 0;
