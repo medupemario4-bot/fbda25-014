@@ -973,10 +973,20 @@ footer {
     padding: 0 1rem; 
   }
 
-  @media (max-width: 768px) {
-  .nav-toggle {
+  @media (min-width: 769px) {
+  .nav-links {
     display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
   }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+  
   .nav-links .nav-btn:not(.nav-cta):not(.active) { 
     display: none; 
   }
