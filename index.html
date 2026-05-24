@@ -6,6 +6,23 @@
     <title>Motswedi SACCOS-Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 <body class="fade-in">
     <nav>
         <a class="nav-logo" href="index.html">
@@ -20,7 +37,6 @@
           <a class="nav-btn active" href="index.html">Home</a>
           <a class="nav-btn" href="aboutservices.html">About &amp; Services</a>
           <a class="nav-btn" href="faq.html">FAQ</a>
-          <a class="nav-btn" href="Feedback.html">Feedback</a>
           <a class="nav-cta" href="aboutservices.html#membership">Join Now</a>
         </div>  
     </nav>
