@@ -13,7 +13,11 @@
   --success: #0F6E56;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -35,7 +39,10 @@ nav {
 }
 
 .nav-logo {
-  display: flex; align-items: center; gap: 10px; text-decoration: none;
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  text-decoration: none;
 }
 
 .nav-logo-img {
@@ -46,16 +53,24 @@ nav {
 }
 
 .nav-logo-mark {
-  width: 36px; height: 36px; border-radius: 50%;
+  width: 36px; 
+  height: 36px; 
+  border-radius: 50%;
   background: var(--gold);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   font-family: 'Playfair Display', serif;
-  font-size: 16px; font-weight: 700; color: var(--navy);
+  font-size: 16px; 
+  font-weight: 700; 
+  color: var(--navy);
 }
 
 .nav-logo-text {
   font-family: 'Playfair Display', serif;
-  font-size: 18px; font-weight: 600; color: var(--white);
+  font-size: 18px; 
+  font-weight: 600; 
+  color: var(--white);
   letter-spacing: 0.3px;
 }
 
@@ -89,7 +104,9 @@ nav {
 }
 
 .nav-btn {
-  background: none; border: none; cursor: pointer;
+  background: none; 
+  border: none; 
+  cursor: pointer;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px; 
   font-weight: 500;
@@ -114,11 +131,17 @@ nav {
 
 .nav-cta {
   background: var(--gold); color: var(--navy);
-  font-weight: 600; border: none;
-  padding: 9px 20px; border-radius: 6px;
-  font-family: 'DM Sans', sans-serif; font-size: 14px;
-  transition: all 0.2s; margin-left: 8px;
-  text-decoration: none; display: inline-flex; align-items: center;
+  font-weight: 600; 
+  border: none;
+  padding: 9px 20px; 
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif; 
+  font-size: 14px;
+  transition: all 0.2s; 
+  margin-left: 8px;
+  text-decoration: none; 
+  display: inline-flex; 
+  align-items: center;
 }
 
 .nav-cta:hover { 
@@ -133,7 +156,7 @@ nav {
 }
 
 .hero-badge-img {
-width: 320px;
+  width: 320px;
   height: 150px;
   object-fit: contain;
   border-radius: 8px;
@@ -154,7 +177,9 @@ width: 320px;
   padding: 10px 2rem;
   font-size: 13px; color: var(--muted);
   border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; gap: 6px;
+  display: flex; 
+  align-items: center; 
+  gap: 6px;
 }
 
 .breadcrumb a { 
@@ -176,7 +201,14 @@ width: 320px;
 
 
 @keyframes fadeIn { 
-  from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } 
+  from { 
+    opacity:0; 
+    transform:translateY(8px); 
+  } 
+  to { 
+    opacity:1; 
+    transform:translateY(0); 
+  } 
 }
 .fade-in { 
   animation: fadeIn 0.4s ease; 
@@ -184,12 +216,19 @@ width: 320px;
 
 
 .btn-primary {
-  background: var(--gold); color: var(--navy);
-  border: none; cursor: pointer;
-  font-family: 'DM Sans', sans-serif; font-weight: 600;
-  font-size: 15px; padding: 13px 28px; border-radius: 8px;
-  transition: all 0.2s; text-decoration: none;
-  display: inline-flex; align-items: center;
+  background: var(--gold); 
+  color: var(--navy);
+  border: none; 
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif; 
+  font-weight: 600;
+  font-size: 15px; 
+  padding: 13px 28px; 
+  border-radius: 8px;
+  transition: all 0.2s; 
+  text-decoration: none;
+  display: inline-flex; 
+  align-items: center;
 }
 
 .btn-primary:hover { 
@@ -227,7 +266,8 @@ width: 320px;
 
 .section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem; color: var(--navy); margin-bottom: 8px;
+  font-size: 2rem; color: var(--navy); 
+  margin-bottom: 8px;
 }
 
 .section-sub { 
@@ -253,10 +293,14 @@ width: 320px;
 .card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 12px; padding: 28px;
+  border-radius: 12px; 
+  padding: 28px;
   transition: all 0.25s;
-  position: relative; overflow: hidden;
-  text-decoration: none; color: inherit; display: block;
+  position: relative; 
+  overflow: hidden;
+  text-decoration: none; 
+  color: inherit; 
+  display: block;
 }
 
 .card::before {
@@ -282,10 +326,15 @@ width: 320px;
 }
 
 .card-icon {
-  width: 44px; height: 44px; border-radius: 10px;
+  width: 44px; 
+  height: 44px; 
+  border-radius: 10px;
   background: rgba(27,58,107,0.08);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; margin-bottom: 16px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 20px; 
+  margin-bottom: 16px;
 }
 
 .card h3 { font-size: 17px; 
@@ -327,13 +376,17 @@ width: 320px;
 .cta-banner {
   background: var(--navy);
   padding: 40px 2rem;
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 20px;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  gap: 20px;
 }
 
 .cta-banner h2 {
   font-family: 'Playfair Display', serif;
-  color: var(--white); font-size: 1.5rem;
+  color: var(--white); 
+  font-size: 1.5rem;
 }
 
 .cta-banner p { 
@@ -345,12 +398,14 @@ width: 320px;
 
 .stats {
   background: var(--white);
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   border-bottom: 1px solid var(--border);
 }
 
 .stat {
-  padding: 24px 20px; text-align: center;
+  padding: 24px 20px; 
+  text-align: center;
   border-right: 1px solid var(--border);
 }
 
@@ -363,31 +418,36 @@ width: 320px;
   font-size: 2rem; font-weight: 700; color: var(--navy);
 }
 
-.stat-label { font-size: 13px; 
+.stat-label { 
+  font-size: 13px; 
   color: var(--muted); 
   margin-top: 4px; 
 }
 
 
-.info-grid { display: grid; 
+.info-grid { 
+  display: grid; 
   grid-template-columns: 1fr 1fr; 
   gap: 40px; 
   align-items: start; 
 }
 
-.info-text h2 { font-family:'Playfair Display',serif; 
+.info-text h2 { 
+  font-family:'Playfair Display',serif; 
   font-size:1.75rem; 
   color:var(--navy); 
   margin-bottom:14px; 
 }
 
-.info-text p { color:var(--muted); 
+.info-text p { 
+  color:var(--muted); 
   line-height:1.8; 
   font-size:15px; 
   margin-bottom:14px; 
 }
 
-.info-box { background: var(--navy); 
+.info-box { 
+  background: var(--navy); 
   border-radius: 16px; 
   padding: 32px; 
   color: var(--white); 
@@ -988,5 +1048,3 @@ footer {
     padding: 0 1rem; 
   }
 }
-
-
